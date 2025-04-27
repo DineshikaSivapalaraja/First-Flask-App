@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Enroll table</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body class='box'>
+        <h2>Enrolled Student Information</h2>
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Course</th>
+            </tr>
+
+            {# <tr>
+                <td>{{ student_name }}</td>
+                <td>{{ student_id }}</td>
+                <td>{{ course }}</td>
+            </tr>  #}
+
+            {% for student in students %}
+            <tr>
+                <td>{{ student.student_name }}</td>
+                <td>{{ student.student_id }}</td>
+                <td>{{ student.course }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br>
+        <button type="submit"><a href="/">Enroll another student</a></button>
+    </body>
+</html>  

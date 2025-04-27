@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Student form</title>
+    <!-- <link href='style.css'> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <!-- <form action="http://127.0.0.1:5000/enroll" method="POST"> -->
+        <form action="/enroll" method="POST">
+
+            <h2>Student Enrollment Form</h2>  
+        
+            <p><label>Student Name: </label>
+            <input name='student_name'/></p>
+            <p><label>Student ID: </label>
+            <input name='student_id'/></p>
+            <p><label>Course: </label>
+            <input name='course'/></p>
+
+            {# <input type ="submit" value="Enroll"/> #}
+            <button type="submit">Enroll</button>
+            
+        </form>
+    </body>
+</html>  
